@@ -1,0 +1,10 @@
+MOUSEKEY_ENABLE 			= no
+RGBLIGHT_ENABLE				= yes
+OLED_ENABLE    				= yes
+OLED_DRIVER    				= SSD1306
+LTO_ENABLE     				= yes
+CONSOLE_ENABLE 				= no
+COMMAND_ENABLE 				= yes
+WPM_ENABLE 					= no
+EXTRAKEY_ENABLE   			= yes
+DYNAMIC_TAPPING_TERM_ENABLE	= yes
