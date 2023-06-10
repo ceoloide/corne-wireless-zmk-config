@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define ADJUST  3
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -22,7 +27,7 @@
    &mt LCTRL GRAVE &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &mt RCTRL BSPC
    &mt LALT TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RGUI SQT
    &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                &mt LGUI ESC &lt 2 TAB &lt 1 RET   &lt 2 SPACE &lt 1 BSPC &mt RALT DEL
+                &mt LGUI ESC &lt RAISE TAB &lt LOWER RET   &lt RAISE SPACE &lt LOWER BSPC &mt RALT DEL
                         >;
                 };
                 lower_layer {
@@ -35,10 +40,9 @@
    &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
    &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &trans
    &trans &kp UNDER &kp PLUS &kp PIPE &kp LBRC &kp RBRC &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &kp BSLH &trans
-                &trans &trans &lt 3 ENT     &trans &lt 3 BSPC &trans
+                &trans &trans &lt ADJUST ENT     &trans &lt ADJUST BSPC &trans
                         >;
                 };
-
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   | HOM | PUP |  UP | PDN | END |      |
@@ -49,10 +53,9 @@
    &trans &trans &trans &trans &trans &trans   &kp HOME &kp PG_UP  &kp UP &kp PG_DN &kp END &trans
    &trans &trans &trans &trans &trans &trans   &kp LA(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LA(RIGHT) &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                     &trans &lt 3 TAB &trans   &lt 3 SPACE &trans &trans
+                     &trans &lt ADJUST TAB &trans   &lt ADJUST SPACE &trans &trans
                         >;
                 };
-
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | CAPS |     |     |     |     |     |   |     |     | VUP |     |     |      |
