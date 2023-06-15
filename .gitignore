@@ -3,3 +3,8 @@
 
 # ZMK / West
 .west
+bootloader
+build
+modules
+tools
+zephyr
