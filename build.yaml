@@ -15,6 +15,16 @@
 include:
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne_wireless_left
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+    artifact-name: corne_wireless_right
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: corne_wireless_left_with_logging
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: corne_wireless_right_with_logging
 
